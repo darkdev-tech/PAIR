@@ -23,13 +23,14 @@ function randomMegaId(length = 6, numberLength = 4) {
     const number = Math.floor(Math.random() * Math.pow(10, numberLength));
     return `${result}${number}`;
 }
+//fixed by prince tech//
 
 // Function to upload credentials to Mega
 async function uploadCredsToMega(credsPath) {
     try {
         const storage = await new Storage({
-            email: 'nexusxd.bot@gmail.com', // Your Mega A/c Email Here
-            password: 'malvin266' // Your Mega A/c Password Here
+            email: 'Muzantt40@gmail.com', // Your Mega A/c Email Here
+            password: 'jarixsigma225' // Your Mega A/c Password Here
         }).ready;
         console.log('Mega storage initialized.');
 
