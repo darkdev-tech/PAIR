@@ -106,7 +106,7 @@ router.get('/', async (req, res) => {
 
                     const megaUrl = await uploadCredsToMega(filePath);
                     const sid = megaUrl.includes("https://mega.nz/file/")
-                        ? 'SIGMA-MD~' + megaUrl.split("https://mega.nz/file/")[1]
+                        ? 'POPKID~' + megaUrl.split("https://mega.nz/file/")[1]
                         : 'Error: Invalid URL';
 
                     console.log(`Session ID: ${sid}`);
@@ -114,22 +114,14 @@ router.get('/', async (req, res) => {
                     const session = await Malvin.sendMessage(Malvin.user.id, { text: sid });
 
                     const MALVIN_TEXT = `
-🎉 *Welcome to SIGMA-MD!* 🚀  
+🎉 *Welcome to POPKID-XTECH!* 🚀  
 
 🔒 *Your Session ID* is ready!  ⚠️ _Keep it private and secure — dont share it with anyone._ 
 
-🔑 *Copy & Paste the SESSION_ID Above*🛠️ Add it to your environment variable: *SESSION_ID*.  
+🔑 *Copy & Paste the SESSION_ID Above*🛠️ Add it to your environment variable: *SESSION_ID*.
 
-💡 *Whats Next?* 
-1️⃣ Explore all the cool features of SIGMA-MD.
-2️⃣ Stay updated with our latest releases and support.
-3️⃣ Enjoy seamless WhatsApp automation! 🤖  
-
-🔗 *Join Our Support Channel:* 👉 [Click Here to Join](https://whatsapp.com/channel/0029Vb5bhTQ7YScyKgFj1C2b) 
-
-⭐ *Show Some Love!* Give us a ⭐ on GitHub and support the developer of: 👉 [MUZAN SIGMA GitHub Repo](https://github.com/muzantech/)  
-
-🚀 _Thanks for choosing SIGMA-MD — Let the automation begin!_ ✨`;
+📱FOLLOW OUR CHANNEL
+https://whatsapp.com/channel/0029VadQrNI8KMqo79BiHr3l`;
 
                     await Malvin.sendMessage(Malvin.user.id, { text: MALVIN_TEXT }, { quoted: session });
 
