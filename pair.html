@@ -159,10 +159,21 @@
       text-align: center;
       font-size: 14px;
     }
+
+    #music-player {
+        position: fixed;
+        bottom: 50px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #music-player audio {
+        width: 80%;
+        max-width: 400px;
+    }
   </style>
 </head>
 <body>
-  <!-- Snowflakes -->
   <div class="snowflake"></div>
   <div class="snowflake"></div>
   <div class="snowflake"></div>
@@ -197,6 +208,13 @@
   <footer>
     POPKID &copy <span id="currentYear"></span>
   </footer>
+
+  <div id="music-player">
+      <audio controls autoplay loop>
+          <source src="https://files.catbox.moe/kxdej4.m4a" type="audio/mpeg">
+          Your browser does not support the audio element.
+      </audio>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
   <script>
